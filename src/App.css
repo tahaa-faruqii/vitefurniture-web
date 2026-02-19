@@ -1,0 +1,907 @@
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 5%; /* Changed from width: 90% for better stability */
+  position: fixed;
+  width: 90%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  color: white;
+  /* background-color: rgba(0, 0, 0, 0.8); Added background for visibility */
+  transition: 0.3s ease;
+}
+
+#nav {
+  display: flex;
+  gap: 30px;
+}
+
+#nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px; /* Reduced from 34px */
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+#nav a:hover {
+  opacity: 0.7;
+}
+
+/* --- Mobile Styles --- */
+.menu-icon {
+  display: none; /* Hidden on desktop */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex; /* Show hamburger on mobile */
+    z-index: 1001;
+  }
+
+  #nav {
+    position: fixed;
+    right: -100%; /* Hidden by default */
+    top: 0;
+    height: 100vh;
+    width: 70%;
+    background-color: #1a1e26;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+  }
+
+  #nav.nav-active {
+    right: 0; /* Slide in when open */
+  }
+
+  #nav a {
+    font-size: 24px;
+  }
+}
+
+/* home */
+
+#home {
+  height: 100vh;
+  background-image: url("/public/modern-sofa.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+}
+
+/* home section  */
+
+#homeSection {
+  text-align: center;
+  padding: 80px 20px 0 20px;
+}
+
+/* Center hero content */
+.hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#top-text {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: white;
+}
+
+#top-desc {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* Center button */
+#shop-now {
+  padding: 12px 30px;
+  background-color: #ffffff85;
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  /* filter: blur(10px); */
+  backdrop-filter: blur(20px);
+}
+
+/* DATA CONTAINER */
+#stats {
+  padding: 80px 20px;
+  background-color: white;
+}
+
+#data-container {
+  position: absolute;
+  bottom: -60px; /* pushes it slightly outside */
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: #286f6c;
+  color: white;
+  width: 90%;
+  max-width: 1100px;
+  padding: 40px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+.stat-item {
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+}
+
+.count {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.text {
+  font-size: 14px;
+}
+
+.divider {
+  width: 1px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+  /* #data-container {
+    position: static;   
+    transform: none;
+    margin: 30px auto 0; 
+    width: 90%;
+    padding: 30px 15px;
+    gap: 20px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  } */
+
+  #data-container {
+    position: static;
+    transform: none;
+    margin: 40px auto 0;   /* space ABOVE it */
+    width: 90%;
+    padding: 30px 15px;
+  }
+
+
+
+
+
+  .divider {
+    display: none;
+  }
+  #homeSection {
+    text-align: center;
+    padding-top: 90px;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ margin-top: auto;
+  }
+
+  .hero-content{
+   padding: 0px;
+  }
+    #top-text {
+    font-size: 28px;
+  }
+
+  #top-desc {
+    font-size: 16px;
+  }
+  
+}
+/* about  */
+
+.about {
+  background-color: #fff;
+  padding: 90px 20px;
+}
+
+.about-wrapper {
+  max-width: 1100px; /* same as data container */
+  margin: 0 auto; /* center */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px; /* space between image and text */
+  flex-wrap: wrap; /* for mobile */
+}
+
+.img-container {
+  flex: 1;
+  min-width: 300px; /* prevent image from shrinking too much */
+}
+
+.about-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.about-text-container {
+  flex: 1;
+  min-width: 300px; /* responsive */
+}
+
+.about-text-container h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about-text-container h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.sofa-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.img-profile {
+  width: 30px;
+  height: 30px;
+}
+
+.about-text-container h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.about-text-container h4 {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #777;
+}
+
+/* Responsive: stack image above text on mobile */
+@media (max-width: 768px) {
+  .about-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+  }
+ .about-section {
+      margin-top: 40px;   /* 🔥 gap after data container */
+    padding: 20px 15px;
+  }
+  .img-container,
+  .about-text-container {
+    min-width: 100%;
+  }
+
+  .sofa-container {
+    justify-content: center;
+  }
+}
+
+/* feature */
+
+/* Container Layout */
+.feature {
+  display: flex;
+  flex-direction: column; /* Stack vertically on mobile */
+  gap: 2rem;
+  padding: 2rem;
+  align-items: flex-start;
+}
+
+.feature-text {
+  flex: 0 0 250px; /* Fixed width on larger screens */
+}
+
+.feature-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Gallery Scrolling */
+.feature-gallery {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto; /* Allows horizontal swipe on mobile */
+  width: 100%;
+  padding-bottom: 1rem;
+  scrollbar-width: none; /* Hide scrollbar for clean look */
+}
+
+.feature-gallery::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual Card */
+.feature-card {
+  position: relative;
+  min-width: 150px; /* Card size on mobile */
+  height: 300px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.feature-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media(max-width:786px){
+  .feature-text{
+    text-align: center;
+    place-items: center;
+  }
+}
+/* Text Overlay on Images */
+#btncheck {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  text-decoration: underline;
+}
+.card-label {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Desktop View */
+@media (min-width: 768px) {
+  .feature {
+    flex-direction: row; /* Side-by-side on desktop */
+    align-items: center;
+  }
+
+  .feature-gallery {
+    overflow-x: visible; /* Show all if space permits */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .feature-card {
+    min-width: auto;
+    height: 50vh;
+  }
+}
+
+.about {
+  display: flex;
+}
+
+/* porduct section */
+
+.productWrapper {
+  display: flex;
+  margin: 0 auto;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers cards horizontally */
+  align-items: center; /* Centers cards vertically (if height allows) */
+  gap: 30px;
+  padding: 40px 10%;
+  text-align: center;
+}
+
+/* Individual Card */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* Image Background Box */
+.product-image-wrapper {
+  position: relative;
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 15px;
+  width: 200px;
+}
+
+.product-image-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Prevents stretching */
+}
+
+/* The Plus Button */
+.add-btn {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #222; /* Dark button like the image */
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+/* Text Styling */
+.product-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  color: #333;
+}
+
+.price-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.current-price {
+  font-weight: 600;
+  color: #333;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjust for the text width */
+@media (max-width: 768px) {
+  .productWrapper {
+    padding: 20px 5%;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+  }
+}
+
+.product-container {
+  max-width: 1000vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px; /* space between image and text */
+  flex-wrap: wrap; /* for mobile */
+  flex-direction: column;
+}
+
+/* Pagination Container */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+/* Arrow Buttons */
+.page-arrow {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.page-arrow:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.page-arrow img {
+  width: 18px;
+}
+
+/* Dots Styling */
+.dots {
+  display: flex;
+  gap: 12px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border: 1.5px solid #333;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #333; /* Dark filled dot for active state */
+}
+
+.review-section {
+  display: flex;
+  flex-direction: column; /* Stack on mobile */
+  gap: 40px;
+  padding: 40px 5%;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.review-content {
+  width: 100%;
+}
+
+.review-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+/* Client Header */
+.client-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.client-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.client-name {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.client-desc {
+  font-size: 0.9rem;
+  color: #888;
+  margin: 0;
+}
+
+.review-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+/* Navigation Arrows */
+.review-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-btn {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.nav-btn.next {
+  background: #2d6a6a; /* Dark teal from your image */
+  color: white;
+  border: none;
+}
+
+/* Image Styling */
+.review-image-wrapper {
+  width: 100%;
+}
+
+.main-review-img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+  .review-section {
+    flex-direction: row; /* Side-by-side */
+    text-align: left;
+    padding: 80px 5%;
+  }
+
+  .review-content {
+    width: 45%; /* Matches the 35-45% look in your design */
+  }
+
+  .review-image-wrapper {
+    width: 55%;
+  }
+}
+/* show now  */
+.shop-now-container {
+  /* padding: 80px 5%; */
+  /* max-width: 1200px; */
+  margin: 0 auto;
+}
+
+.shop-now-banner {
+  background-color: #2d6a6a;
+  /* border-radius: 20px; */
+  display: flex;
+  flex-direction: column; /* Stack on mobile */
+  align-items: center;
+  position: relative;
+  padding: 40px;
+  min-height: 300px;
+  overflow: visible; /* Allows lamp to hang outside if needed */
+}
+
+/* Image Positioning */
+.left-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.floating-lamp {
+  height: 250px;
+  width: 100%;
+  margin-top: -80px;
+  filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.2));
+}
+
+/* Text & Form Styling */
+.right-content {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.banner-title {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.banner-subtitle {
+  opacity: 0.9;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+/* Form Layout */
+.input-section {
+  display: flex;
+  /* background: white; */
+  padding: 6px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.email-input {
+  border: none;
+  padding: 12px 15px;
+  flex: 1;
+  outline: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  max-width: 460px;
+}
+
+.shop-btn {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 0 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-left: 20px;
+}
+
+.shop-btn:hover {
+  background-color: #444;
+}
+@media (max-width:768px){
+  .input-section {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .shop-btn {
+    width: 100%;      /* full width button */
+    padding: 12px;
+    margin-left: 0;   /* remove desktop spacing */
+    justify-content: center;
+  }
+}
+/* Desktop Layout */
+@media (min-width: 768px) {
+  .shop-now-banner {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 60px 80px;
+    text-align: left;
+  }
+
+  .left-content {
+    width: 40%;
+    justify-content: flex-start;
+  }
+
+  .floating-lamp {
+    height: 400px;
+    margin-top: -100px;
+    margin-left: -20px;
+  }
+
+  .right-content {
+    width: 55%;
+    text-align: left;
+  }
+
+  .input-section {
+    margin: 0;
+  }
+}
+
+.footer-container {
+  background-color: #1a1e26; /* Dark navy background from image */
+  color: #ffffff;
+  padding: 60px 10% 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.footer-logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links img {
+  width: 20px;
+  height: 20px;
+  background-color: #2d323d; /* Darker circle background */
+  padding: 10px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+  transform: translateY(-3px);
+}
+
+.footer-divider {
+  border: 0;
+  border-top: 1px solid #333945;
+  margin-bottom: 50px;
+}
+
+/* Flexbox Grid */
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap; /* Allows stacking on mobile */
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-column {
+  flex: 1 1 200px; /* Grow, shrink, and set base width */
+  min-width: 150px;
+}
+
+.footer-column h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  font-size: 14px;
+  color: #adb5bd; /* Light grey text */
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.footer-column li:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 13px;
+  color: #6c757d;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-grid {
+    text-align: center;
+  }
+
+  .footer-column {
+    flex: 1 1 100%; /* Columns take full width on tiny screens */
+  }
+}
