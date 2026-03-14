@@ -191,11 +191,26 @@
     margin: 40px auto 0;   /* space ABOVE it */
     width: 90%;
     padding: 30px 15px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    align-items: start; /* align grid items top so left/right line up */
+    justify-items: center;
   }
 
 
 
 
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Prevent stat items from forcing wider grid columns on small screens */
+    min-width: 0;
+  }
 
   .divider {
     display: none;
