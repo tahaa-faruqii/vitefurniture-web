@@ -15,7 +15,7 @@ function Manufacture() {
         </div>
         <div className="img-container">
           {/* <img src="/public/sofa.png" alt="" className="about-img" /> */}
-          <img src="/public/kitchen.png" alt="" className="about-img" />
+          <img src="/kitchen.png" alt="" className="about-img" />
         </div>
       </div>
     </div>

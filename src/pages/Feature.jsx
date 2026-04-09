@@ -3,19 +3,19 @@ import React from "react";
 export default function Feature() {
   const data = [
     {
-      img: "/public/sofa.png",
+      img: "/sofa.png",
       name: "Chair",
     },
     {
-      img: "/public/bedroom.png",
+      img: "/bedroom.png",
       name: "Bed",
     },
     {
-      img: "/public/cuboard.png",
+      img: "/cuboard.png",
       name: "Cuboard",
     },
     {
-      img: "/public/lamp.png",
+      img: "/lamp.png",
       name: "Lighting",
     },
   ];

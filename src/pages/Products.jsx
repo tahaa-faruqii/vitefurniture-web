@@ -4,49 +4,49 @@ import ProductCard from "../components/ProductCard";
 function Products() {
   const data = [
     {
-      img: "/public/ceiling-light.png",
+      img: "/ceiling-light.png",
       price: "$45.00",
       actual: "$85.00",
       name: "Ceiling Light",
     },
     {
-      img: "/public/chair.png",
+      img: "/chair.png",
       price: "$45.00",
       actual: "$85.00",
       name: "Wood Chair",
     },
     {
-      img: "/public/cuboard-papper.png",
+      img: "/cuboard-papper.png",
       price: "$45.00",
       actual: "$85.00",
       name: "Papper-cupboard",
     },
     {
-      img: "/public/bed.png",
+      img: "/bed.png",
       price: "$45.00",
       actual: "$85.00",
       name: "Ole Gundorse Spring...",
     },
     {
-      img: "/public/bed-chair.png",
+      img: "/bed-chair.png",
       price: "$45.00",
       actual: "$85.00",
       name: "Treos Seroes 911",
     },
     {
-      img: "/public/llight-wall.png",
+      img: "/llight-wall.png",
       price: "$45.00",
       actual: "$85.00",
       name: "Multi bilderman slibber...",
     },
     {
-      img: "/public/table.png",
+      img: "/table.png",
       price: "$45.00",
       actual: "$85.00",
       name: "XORA corner desk",
     },
     {
-      img: "/public/baby-bed.png",
+      img: "/baby-bed.png",
       price: "$45.00",
       actual: "$85.00",
       name: "Black Forest Series wo...",

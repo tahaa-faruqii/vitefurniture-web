@@ -8,16 +8,16 @@ function Footer() {
         <h2 className="footer-logo">FurniShop</h2>
         <div className="social-links">
           <a href="#">
-            <img src="/public/instagram.png" alt="Instagram" />
+            <img src="/instagram.png" alt="Instagram" />
           </a>
           <a href="#">
-            <img src="/public/facebook.png" alt="Facebook" />
+            <img src="/facebook.png" alt="Facebook" />
           </a>
           <a href="#">
-            <img src="/public/twitter.png" alt="Twitter" />
+            <img src="/twitter.png" alt="Twitter" />
           </a>
           <a href="#">
-            <img src="/public/github.png" alt="Github" />
+            <img src="/github.png" alt="Github" />
           </a>
         </div>
       </div>

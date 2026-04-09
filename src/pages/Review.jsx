@@ -8,7 +8,7 @@ function Review() {
 
         <div className="client-info">
           <img
-            src="/public/sofa.png"
+            src="/sofa.png"
             alt="Josh Smith"
             className="client-avatar"
           />
@@ -32,7 +32,7 @@ function Review() {
 
       <div className="review-image-wrapper">
         <img
-          src="/public/drawing-room.png"
+          src="/drawing-room.png"
           alt="Interior"
           className="main-review-img"
         />
