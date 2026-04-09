@@ -5,7 +5,7 @@ function About() {
     <div className="about">
       <div className="about-wrapper">
         <div className="img-container">
-          <img src="/public/sofa.png" alt="" className="about-img" />
+          <img src="/sofa.png" alt="" className="about-img" />
         </div>
         <div className="about-text-container">
           <h1>
@@ -17,7 +17,7 @@ function About() {
           </h3>
 
           <div className="sofa-container">
-            <img src="/public/check.png" className="img-profile" />
+            <img src="/check.png" className="img-profile" />
             <h2>Valuation Services</h2>
           </div>
           <h4>
@@ -26,7 +26,7 @@ function About() {
           </h4>
 
           <div className="sofa-container">
-            <img src="/public/check.png" className="img-profile" />
+            <img src="/check.png" className="img-profile" />
             <h2>Development of Furniture Models</h2>
           </div>
           <h4>
